@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  width: 100px;
+  height: 50px;
+  margin: 250px auto;
+  display: block;
+  background-color: rgb(202, 223, 226);
+  border-radius: 25px;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+
+label::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  top: 7.5px;
+  left: 7.5px;
+  background: rgb(141, 172, 175);
+  border-radius: 50px;
+}
+
+input:checked + label {
+  background: rgb(150, 239, 184);
+}
+
+input:checked + label::after {
+  transform: translateX(50px);
+  background: rgb(29, 105, 52);
+}
